@@ -3,7 +3,7 @@ require 'rails/generators'
 
 # module TaiwanCityDistsHelper
 #   module Generators
-    class TaiwanCityDistsGenerator < Rails::Generators::Base
+    class TaiwanCityDistsHelperGenerator < Rails::Generators::Base
       include Rails::Generators::Migration
       extend ActiveRecord::Generators::Migration
 
