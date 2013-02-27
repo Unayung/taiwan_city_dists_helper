@@ -1,6 +1,8 @@
 require "rails"
 require "taiwan_city_dists_helper/version"
 require "action_view"
+require "active_record"
+require "nokogiri"
 
 module TaiwanCityDistsHelper
   # Your code goes here...

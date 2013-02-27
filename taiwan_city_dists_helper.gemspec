@@ -5,7 +5,7 @@ require 'taiwan_city_dists_helper/version'
 
 Gem::Specification.new do |gem|
   gem.name          = "taiwan_city_dists_helper"
-  gem.version       = TaiwanCityDistsHelper::VERSION
+  gem.version       = TaiwanCityDistsHelper::Rails::VERSION
   gem.authors       = ["unayung"]
   gem.email         = ["Unayung@gmail.com"]
   gem.description   = %q{Just say Taiwan}
