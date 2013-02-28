@@ -1,7 +1,7 @@
 class CreateCitiesAndDists < ActiveRecord::Migration
   def self.up
     create_table :cities, :force => true do |table|
-      table.string :name                      # The name of the queue this job is in
+      table.string :name
       table.timestamps
     end
 
