@@ -8,7 +8,7 @@ Gem::Specification.new do |gem|
   gem.version       = TaiwanCityDistsHelper::Rails::VERSION
   gem.authors       = ["unayung"]
   gem.email         = ["Unayung@gmail.com"]
-  gem.description   = %q{Just say Taiwan}
+  gem.description   = %q{Generate Taiwan cities and dists model and provide dynamic select box helper}
   gem.summary       = %q{This gem is a test}
   gem.homepage      = ""
 
