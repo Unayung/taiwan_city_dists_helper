@@ -9,6 +9,7 @@ namespace :taiwan_city_dists do
   task :copy => :environment do
     source_root = File.expand_path(File.join(File.dirname(__FILE__), '..', '..'))
     FileUtils.cp_r("#{source_root}/app/models/.", "#{Rails.root}/app/models", { :preserve => true })
+    FileUtils.cp_r("#{source_root}/app/assets/javascripts/.", "#{Rails.root}/app/assets/javascripts", { :preserve => true })
   end
 
   desc "Grab cities and dists from wikipedia"
