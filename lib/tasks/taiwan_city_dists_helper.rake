@@ -20,10 +20,8 @@ namespace :taiwan_city_dists_helper do
   desc "Grab cities and dists from wikipedia"
   task :get_cities_and_dists => :environment do
     url = "http://zh.wikipedia.org/wiki/%E4%B8%AD%E8%8F%AF%E6%B0%91%E5%9C%8B%E5%8F%B0%E7%81%A3%E5%9C%B0%E5%8D%80%E9%84%89%E9%8E%AE%E5%B8%82%E5%8D%80%E5%88%97%E8%A1%A8"
-    doc = Nokogiri::HTML(open(url))
-    if doc.length < 1
-      puts "Please check your network connection, we can't get wikipedia :("
-    else
+    begin
+      doc = Nokogiri::HTML(open(url))
       puts "We got data from wikipedia, now processing ..."
       doc.search("//table[@class='wikitable']//tr").each do |tr|
         city_name = tr.search("td[1]").text
@@ -36,6 +34,9 @@ namespace :taiwan_city_dists_helper do
           end
         end
       end
+    rescue Exception => e
+      puts "Please check your network connection, we can't get wikipedia :("
+      puts "maybe try later will do ?"
     end
 
   end
