@@ -4,7 +4,7 @@ require 'rails/generators/active_record/migration'
 
 module TaiwanCityDistsHelper
   module Generators
-    class TaiwanCityDistsHelperGenerator < Rails::Generators::Base
+    class TableGenerator < Rails::Generators::Base
       include Rails::Generators::Migration
 
       self.source_paths << File.join(File.dirname(__FILE__), 'templates')
