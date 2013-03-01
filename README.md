@@ -11,15 +11,12 @@ And then execute:
 
     $ bundle
 
-Or install it yourself as:
-
-    $ gem install taiwan_city_dists_helper
-
 ## Usage
 
-    1. rails g taiwan_city_dists_helper
+    1. rails g taiwan_city_dists_helper:table
     2. rake db:migrate
-
+    3. rake taiwan_city_dists_helper:copy
+    4. rake taiwan_city_dists_helper:get_cities_and_dists
 ## Contributing
 
 1. Fork it

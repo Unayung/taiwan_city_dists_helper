@@ -3,13 +3,17 @@ require 'nokogiri'
 require 'open-uri'
 require "fileutils"
 
-namespace :taiwan_city_dists do
+namespace :taiwan_city_dists_helper do
 
   desc "Copy city.rb and dist.rb"
   task :copy => :environment do
     source_root = File.expand_path(File.join(File.dirname(__FILE__), '..', '..'))
+    puts "Copy City.rb and Dist.rb to your app/models ..."
     FileUtils.cp_r("#{source_root}/app/models/.", "#{Rails.root}/app/models", { :preserve => true })
+    puts "============================================================"
+    puts "Copy taiwan_city_dists.js to your app/assets/javascripts ..."
     FileUtils.cp_r("#{source_root}/app/assets/javascripts/.", "#{Rails.root}/app/assets/javascripts", { :preserve => true })
+    puts "Don't forget require taiwan_city_dists_helper js file in your application.js"
   end
 
   desc "Grab cities and dists from wikipedia"
@@ -19,7 +23,6 @@ namespace :taiwan_city_dists do
     doc.search("//table[@class='wikitable']//tr").each do |tr|
       city_name = tr.search("td[1]").text
       if city_name != ""
-        #puts city_name
         @city = City.create(:name => "#{city_name}")
 
         dist_string = tr.search("td[3]").text
