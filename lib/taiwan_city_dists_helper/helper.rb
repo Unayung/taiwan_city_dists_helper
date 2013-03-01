@@ -16,20 +16,23 @@ module TaiwanCityDistsHelper
 
     def render_city_dists_js
       s = <<-HEREDOC
-      jQuery ->
-        $('#person_state_id').parent().hide()
-        states = $('#person_state_id').html()
-        $('#person_country_id').change ->
-          country = $('#person_country_id :selected').text()
-          escaped_country = country.replace(/([ #;&,.+*~\':"!^$[\]()=>|\/@])/g, '\\$1')
-          options = $(states).filter("optgroup[label=#{escaped_country}]").html()
-          console.log(options)
-          if options
-            $('#person_state_id').html(options)
-            $('#person_state_id').parent().show()
-          else
-            $('#person_state_id').empty()
-            $('#person_state_id').parent().hide()
+<script type="text/javascript">
+  jQuery(function() {
+  var dists;
+  dists = $('select[id*="_dist_id"]').html();
+  return $('select[id*="_city_id"]').change(function() {
+    var city, escaped_city, options;
+    city = $('select[id*="_city_id"] :selected').text();
+    escaped_city = city.replace(/([ #;&,.+*~\':"!^$[\]()=>|\/@])/g, '\\$1');
+    options = $(dists).filter("optgroup[label=" + escaped_city + "]").html();
+    if (options) {
+      return $('select[id*="_dist_id"]').html(options);
+    } else {
+      return $('select[id*="_dist_id"]').empty();
+    }
+  });
+});
+</script>
       HEREDOC
     end
   end
