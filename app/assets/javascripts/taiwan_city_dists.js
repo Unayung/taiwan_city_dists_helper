@@ -1,4 +1,4 @@
-jQuery(function() {
+(function() {
   var dists;
   dists = $('select[id*="_dist_id"]').html();
   return $('select[id*="_city_id"]').change(function() {
