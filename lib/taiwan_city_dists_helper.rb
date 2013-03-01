@@ -5,12 +5,7 @@ require "active_record"
 require "nokogiri"
 
 module TaiwanCityDistsHelper
-  # Your code goes here...
   module Rails
-    # if ::Rails.version < "3.1"
-    #   require "taiwan_city_dists_helper/railtie"
-    # else
-      require "taiwan_city_dists_helper/engine"
-    # end
+    require "taiwan_city_dists_helper/engine"
   end
 end
