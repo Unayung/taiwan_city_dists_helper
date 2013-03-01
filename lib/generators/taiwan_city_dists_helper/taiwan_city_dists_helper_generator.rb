@@ -3,8 +3,8 @@ require 'rails/generators/migration'
 require 'rails/generators/active_record/migration'
 
 module TaiwanCityDistsHelper
-  #module Generators
-    class TableGenerator < Rails::Generators::Base
+  module Generators
+    class TaiwanCityDistsHelperGenerator < Rails::Generators::Base
       include Rails::Generators::Migration
 
       self.source_paths << File.join(File.dirname(__FILE__), 'templates')
@@ -17,5 +17,5 @@ module TaiwanCityDistsHelper
         @migration_number = Time.now.utc.strftime("%Y%m%d%H%M%S").to_i.to_s
       end
     end
-  #end
+  end
 end
