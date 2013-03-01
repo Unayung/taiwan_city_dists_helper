@@ -15,8 +15,7 @@ module TaiwanCityDistsHelper
     end
 
     def render_city_dists_js
-      s = <<-HEREDOC
-<script type="text/javascript">
+      javascript_tag = <<-HEREJS
   jQuery(function() {
   var dists;
   dists = $('select[id*="_dist_id"]').html();
@@ -32,8 +31,7 @@ module TaiwanCityDistsHelper
     }
   });
 });
-</script>
-      HEREDOC
+      HEREJS
     end
   end
 end
