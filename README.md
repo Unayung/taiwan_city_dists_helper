@@ -57,7 +57,7 @@ will render
 ### render\_grouped\_dist\_select(FormObject, CollectionOfCities, IncludeBlank?=false)
 will render
 
-    <select id="deal_dist_id" name="deal[dist_id]">
+    <select id="customer_dist_id" name="customer[dist_id]">
     <optgroup label="臺北市">
       <option value="1">松山區</option>
       <option value="2">大安區</option>
