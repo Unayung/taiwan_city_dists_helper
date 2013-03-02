@@ -98,6 +98,10 @@ Or with form\_for you still can do this
       <%= render_grouped_dist_select(f, @cities, false) %>
     <% end %>
 
+When you using render\_city\_select and render\_grouped\_dist\_select together
+
+dist select box will dynamic filter matching options
+
 ## Contributing
 
 1. Fork it
