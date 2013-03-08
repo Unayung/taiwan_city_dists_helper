@@ -11,9 +11,6 @@ namespace :taiwan_city_dists_helper do
     puts "Copy City.rb and Dist.rb to your app/models ..."
     FileUtils.cp_r("#{source_root}/app/models/.", "#{Rails.root}/app/models", { :preserve => true })
     puts "============================================================"
-    puts "Copy taiwan_city_dists.js to your app/assets/javascripts ..."
-    FileUtils.cp_r("#{source_root}/app/assets/javascripts/.", "#{Rails.root}/app/assets/javascripts", { :preserve => true })
-    puts "============================================================"
     puts "Don't forget require taiwan_city_dists_helper js file in your application.js"
   end
 
