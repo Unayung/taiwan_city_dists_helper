@@ -7,7 +7,7 @@ module TaiwanCityDistsHelper
     # included in rails engine
     class Engine < ::Rails::Engine
       initializer 'taiwan_city_dists_helper.view_helpers' do
-        include TaiwanCityDistsHelper::Helper
+        ActionView::Base.send :include, TaiwanCityDistsHelper::Helper
       end
     end
   end

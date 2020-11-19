@@ -4,7 +4,7 @@ require 'rails/generators'
 require 'rails/generators/migration'
 require 'rails/generators/active_record/migration'
 
-module TaiwanCityDistsHelper
+module Tcdh
   module Generators
     # table generator
     class TableGenerator < ::Rails::Generators::Base

@@ -1,14 +1,14 @@
 # frozen_string_literal: true
 
 # create cities and dists table
-class CreateCitiesAndDists < ActiveRecord::Migration
+class CreateCitiesAndDists < ActiveRecord::Migration[4.2]
   def self.up
-    create_table :cities, force: true do |table|
+    create_table :tcdh_cities, force: true do |table|
       table.string :name
       table.timestamps
     end
 
-    create_table :dists, force: true do |table|
+    create_table :tcdh_dists, force: true do |table|
       table.string :name
       table.integer :city_id
       table.timestamps
@@ -16,7 +16,7 @@ class CreateCitiesAndDists < ActiveRecord::Migration
   end
 
   def self.down
-    drop_table :cities
-    drop_table :dists
+    drop_table :tcdh_cities
+    drop_table :tcdh_dists
   end
 end

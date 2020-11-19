@@ -3,11 +3,10 @@
 # gemspec
 lib = File.expand_path('/lib', __dir__)
 $LOAD_PATH.unshift(lib) unless $LOAD_PATH.include?(lib)
-require 'taiwan_city_dists_helper/version'
 
 Gem::Specification.new do |gem|
   gem.name          = 'taiwan_city_dists_helper'
-  gem.version       = TaiwanCityDistsHelper::Rails::VERSION
+  gem.version       = '0.95'
   gem.required_ruby_version = '>= 2.5.7'
   gem.authors       = 'unayung'
   gem.email         = 'Unayung@gmail.com'
@@ -16,6 +15,7 @@ Gem::Specification.new do |gem|
   gem.homepage      = 'http://github.com/Unayung/taiwan_city_dists_helper'
 
   gem.add_dependency 'nokogiri'
+  gem.add_dependency 'ruby-progressbar'
   gem.files         = `git ls-files`.split($/)
   gem.executables   = gem.files.grep(%r{^bin/}).map { |f| File.basename(f) }
   gem.test_files    = gem.files.grep(%r{^(test|spec|features)/})

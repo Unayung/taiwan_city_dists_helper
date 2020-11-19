@@ -16,9 +16,9 @@ And then execute:
 
 ## Preparation
 
-    1. bundle exec rails g taiwan_city_dists_helper:table
+    1. bundle exec rails g tcdh:table
     2. bundle exec rails db:migrate
-    3. bundle exec rails taiwan_city_dists_helper:fetch
+    3. bundle exec rails tcdh:fetch
     4. add //= require taiwan_city_dists_helper to your application.js ( webpacker not supported )
 
 Make sure your object ( let's say Customer ) has relations with city and dist, so you have to
