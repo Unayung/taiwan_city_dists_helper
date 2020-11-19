@@ -2,7 +2,7 @@
 
 Generate Taiwan City and Districts models with dynamic select boxes
 
-輕鬆產生台灣鄉鎮市的 model relation 以及動態 select box
+輕鬆產生台灣鄉鎮市的 model relation 以及動態 select box ( webpacker 暫不支援 )
 
 ## Installation
 
@@ -29,7 +29,7 @@ add city\_id and dist\_id to your customers table, and define belongs_to in your
       belongs_to :dist
     end
 
-## Helper
+## Helper ( webpacker not supported )
 
 ### render\_city\_select(FormObject, CollectionOfCities, IncludeBlank?=false)
 will render
