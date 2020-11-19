@@ -2,7 +2,7 @@
 
 Generate Taiwan City and Districts models with dynamic select boxes
 
-輕鬆產生台灣鄉鎮市的 model 以及動態 select box
+輕鬆產生台灣鄉鎮市的 model relation 以及動態 select box
 
 ## Installation
 
@@ -12,14 +12,14 @@ Add this line to your application's Gemfile:
 
 And then execute:
 
-    $ bundle
+    $ bundle install
 
 ## Preparation
 
-    1. rails g taiwan_city_dists_helper:table
-    2. rake db:migrate
-    3. rake taiwan_city_dists_helper:get_cities_and_dists
-    4. add //= require taiwan_city_dists_helper to your application.js
+    1. bundle exec rails g taiwan_city_dists_helper:table
+    2. bundle exec rails db:migrate
+    3. bundle exec rails taiwan_city_dists_helper:fetch
+    4. add //= require taiwan_city_dists_helper to your application.js ( webpacker not supported )
 
 Make sure your object ( let's say Customer ) has relations with city and dist, so you have to
 add city\_id and dist\_id to your customers table, and define belongs_to in your customer.rb
