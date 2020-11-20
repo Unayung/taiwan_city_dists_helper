@@ -1,3 +1,5 @@
+[![Gem Version](https://badge.fury.io/rb/taiwan_city_dists_helper.png)](https://badge.fury.io/rb/taiwan_city_dists_helper)
+
 # TaiwanCityDistsHelper
 
 Generate Taiwan City and Districts models with dynamic select boxes
